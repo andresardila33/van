@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>VAN</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h1>VALOR ACTUAL NETO</h1>
+      <section class="section">
+        <h2>VALOR PRESENTE</h2>
+        <div class="box">
+          <label class="box__tag" for="">Tasa de interés</label>
+          <input v-model="i" type="text" placeholder="Tasa de interés" />
+        </div>
+        <div class="box">
+          <label class="box__tag" for="">Periodos</label>
+          <input v-model="n" type="text" placeholder="Periodos" />
+        </div>
+        <div class="box">
+          <label class="box__tag" for="">Valor en el futuro</label>
+          <input v-model="f" type="text" placeholder="Valor en el futuro" />
+        </div>
+        <button class="button" v-on:click="newVp">Estimar valor presente</button>
+      </section>
+      <section class="section">
+        <h2>VALOR FUTURO</h2>
+        <div class="box">
+          <label class="box__tag" for="">Inversión</label>
+          <input v-model="p" type="text" placeholder="Inversión" />
+        </div class="box">
+        <button class="button" v-on:click="newVf">Estimar valor futuro</button>
+      </section>
+      <hr />
+      <section class="section">
+        <h2>RESULTADOS</h2>
+        <div class="box">
+          <label class="box__tag" for="">Valor presente</label>
+          <input v-model="vp" type="text" />
+        </div>
+        <div class="box">
+          <label class="box__tag" for="">Valor futuro</label>
+          <input v-model="vf" type="text" />
+        </div>
+      </section>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
